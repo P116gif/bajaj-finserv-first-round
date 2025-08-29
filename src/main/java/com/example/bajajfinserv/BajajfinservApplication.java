@@ -66,7 +66,7 @@ public class BajajfinservApplication implements CommandLineRunner {
 
 			HttpHeaders headers2 = new HttpHeaders();
 			headers2.setContentType(MediaType.APPLICATION_JSON);
-			headers2.setBearerAuth(accessToken);
+			headers2.set("Authorization", accessToken);
 
 			HttpEntity<String> request = new HttpEntity<>(payload.toString(), headers2);
 
